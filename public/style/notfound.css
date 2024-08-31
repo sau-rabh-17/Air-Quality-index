@@ -8,13 +8,13 @@ body{
 }
 
 .button {
-    background-color: #4f74cb; /* Green background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    padding: 15px 30px; /* Spacing inside the button */
-    font-size: 18px; /* Larger text */
-    font-weight: bold; /* Bold text */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and scale */
+    background-color: #4f74cb; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }

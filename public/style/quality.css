@@ -4,22 +4,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #e0f2f1, #b2dfdb); /* Light green gradient for a fresh look */
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb); 
 }
 
 .container {
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px; /* Adjust width if needed */
+    width: 500px; 
     height: 600px;
-    padding: 30px; /* Increased padding for better spacing */
+    padding: 30px; 
     font-family: Arial, sans-serif;
-    border: 5px solid #4caf50; /* Green border to match the theme */
-    border-radius: 15px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    border: 5px solid #4caf50; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 h1, h2, h3, p {
@@ -31,15 +31,15 @@ h1, h2, h3, p {
 }
 
 .aqi-meter {
-    width: 450px; /* Length of the meter */
-    height: 40px; /* Height of the meter */
+    width: 450px;
+    height: 40px; 
     background: linear-gradient(to right, 
-        #009966 0%,    /* Good: 0-50 */
-        #ffde33 20%,   /* Moderate: 51-100 */
-        #ff9933 40%,   /* Unhealthy for Sensitive Groups: 101-150 */
-        #cc0033 60%,   /* Unhealthy: 151-200 */
-        #660099 80%,   /* Very Unhealthy: 201-300 */
-        #7e0023 100%   /* Hazardous: 301-500 */
+        #009966 0%,    
+        #ffde33 20%,   
+        #ff9933 40%,   
+        #cc0033 60%,   
+        #660099 80%,   
+        #7e0023 100%   
     );
     border-radius: 15px;
     position: relative;
@@ -47,9 +47,9 @@ h1, h2, h3, p {
 }
 
 .aqi-indicator {
-    width: 8px; /* Slightly wider indicator */
-    height: 40px; /* Match height to the AQI meter */
-    background-color: #333; /* Dark color for visibility */
+    width: 8px; 
+    height: 40px; 
+    background-color: #333; 
     position: absolute;
     top: 0;
     left: 0;
@@ -58,28 +58,28 @@ h1, h2, h3, p {
 }
 
 #aqi-label {
-    margin-top: 15px; /* Spacing above the label */
+    margin-top: 15px; 
     text-align: center;
-    font-size: 22px; /* Increased font size for readability */
+    font-size: 22px; 
     font-weight: bold;
 }
 
 .go-back-form {
-    margin-top: 30px; /* Increased margin for spacing */
+    margin-top: 30px; 
     text-align: center;
 }
 
 .go-back-button {
-    padding: 20px 40px; /* Larger padding for a prominent button */
-    font-size: 20px; /* Larger font size for better readability */
+    padding: 20px 40px; 
+    font-size: 20px; 
     color: white;
-    background-color: #4caf50; /* Matching green background */
+    background-color: #4caf50; 
     border: none;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .go-back-button:hover {
-    background-color: #388e3c; /* Darker green on hover */
+    background-color: #388e3c; 
 }

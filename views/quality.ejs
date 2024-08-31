@@ -14,7 +14,6 @@
         <% if (contents && contents.overall_aqi !== undefined) { %>
             <div class="aqi-container">
                 <h2>Overall AQI: <%= contents.overall_aqi %></h2>
-                <!-- AQI Meter Bar -->
                 <div class="aqi-meter">
                     <div class="aqi-indicator" id="aqi-indicator"></div>
                 </div>
@@ -46,39 +45,36 @@
                 let aqiLabel = '';
                 let color = '';
 
-                // Calculate position based on AQI value
                 const position = (aqi / maxAQI) * 100;
 
-                // Update the position of the indicator
                 indicator.style.left = position + '%';
 
-                // Determine the AQI label and color based on the value
                 if (aqi <= 50) {
                     aqiLabel = 'Good';
-                    color = '#009966';  // Green
+                    color = '#009966';  
                 } else if (aqi <= 100) {
                     aqiLabel = 'Moderate';
-                    color = '#ffde33';  // Yellow
+                    color = '#ffde33';  
                 } else if (aqi <= 150) {
                     aqiLabel = 'Unhealthy for Sensitive Groups';
-                    color = '#ff9933';  // Orange
+                    color = '#ff9933';  
                 } else if (aqi <= 200) {
                     aqiLabel = 'Unhealthy';
-                    color = '#cc0033';  // Red
+                    color = '#cc0033';  
                 } else if (aqi <= 300) {
                     aqiLabel = 'Very Unhealthy';
-                    color = '#660099';  // Purple
+                    color = '#660099';  
                 } else {
                     aqiLabel = 'Hazardous';
-                    color = '#7e0023';  // Maroon
+                    color = '#7e0023';  
                 }
 
-                // Update the label with the descriptive AQI value and apply the color
+                
                 label.textContent = `AQI: ${aqi} - ${aqiLabel}`;
                 label.style.color = color;
             }
 
-            // Automatically update the AQI meter with the AQI value from the backend
+            
             <% if (contents && contents.overall_aqi !== undefined) { %>
                 updateAQIMeter(<%= contents.overall_aqi %>);
             <% } %>

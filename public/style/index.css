@@ -1,0 +1,45 @@
+body {
+    background-color: #d4e157; /* Light yellow-green for a fresh look */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ensure there's no default margin */
+}
+
+form {
+    background-color: #aeea00; /* Brighter, more vibrant green */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    border: 5px solid #4caf50; /* Darker green border for contrast */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding for spacing inside the form */
+}
+
+img {
+    height: 150px;
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+input {
+    width: 80%; /* Responsive width */
+    height: 40px; /* Slightly taller for better usability */
+    font-weight: bold;
+    margin-top: 10px;
+    border: 2px solid #4caf50; /* Match border with form border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    padding: 5px; /* Add padding inside the input field */
+}
+
+input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #2c6b2f; /* Darker green border on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Light shadow on focus */
+}

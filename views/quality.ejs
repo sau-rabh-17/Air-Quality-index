@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality</title>
+    <link rel="stylesheet" href="/style/quality.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Air Quality for <%= city %></h1>
+        <% if (contents && contents.overall_aqi !== undefined) { %>
+            <div class="aqi-container">
+                <h2>Overall AQI: <%= contents.overall_aqi %></h2>
+                <!-- AQI Meter Bar -->
+                <div class="aqi-meter">
+                    <div class="aqi-indicator" id="aqi-indicator"></div>
+                </div>
+                <p id="aqi-label" class="aqi-label"></p>
+            </div>
+
+            <h3>
+                <p>CO: <%= contents.CO.concentration %></p>
+                <p>NO2: <%= contents.NO2.concentration %></p>
+                <p>SO2: <%= contents.SO2.concentration %></p>
+                <p>O3: <%= contents.O3.concentration %></p>
+                <p>PM10: <%= contents.PM10.concentration %></p>
+            </h3>
+        <% } else { %>
+            <p>AQI data is not available.</p>
+        <% } %>
+
+        <form method="post" action="/redirect" class="go-back-form">
+            <input type="submit" value="Go Back" class="go-back-button">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function updateAQIMeter(aqi) {
+                const maxAQI = 500;
+                const indicator = document.getElementById('aqi-indicator');
+                const label = document.getElementById('aqi-label');
+                let aqiLabel = '';
+                let color = '';
+
+                // Calculate position based on AQI value
+                const position = (aqi / maxAQI) * 100;
+
+                // Update the position of the indicator
+                indicator.style.left = position + '%';
+
+                // Determine the AQI label and color based on the value
+                if (aqi <= 50) {
+                    aqiLabel = 'Good';
+                    color = '#009966';  // Green
+                } else if (aqi <= 100) {
+                    aqiLabel = 'Moderate';
+                    color = '#ffde33';  // Yellow
+                } else if (aqi <= 150) {
+                    aqiLabel = 'Unhealthy for Sensitive Groups';
+                    color = '#ff9933';  // Orange
+                } else if (aqi <= 200) {
+                    aqiLabel = 'Unhealthy';
+                    color = '#cc0033';  // Red
+                } else if (aqi <= 300) {
+                    aqiLabel = 'Very Unhealthy';
+                    color = '#660099';  // Purple
+                } else {
+                    aqiLabel = 'Hazardous';
+                    color = '#7e0023';  // Maroon
+                }
+
+                // Update the label with the descriptive AQI value and apply the color
+                label.textContent = `AQI: ${aqi} - ${aqiLabel}`;
+                label.style.color = color;
+            }
+
+            // Automatically update the AQI meter with the AQI value from the backend
+            <% if (contents && contents.overall_aqi !== undefined) { %>
+                updateAQIMeter(<%= contents.overall_aqi %>);
+            <% } %>
+        });
+    </script>
+</body>
+
+</html>

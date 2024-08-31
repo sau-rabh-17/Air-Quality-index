@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb); /* Light green gradient for a fresh look */
+}
+
+.container {
+    background-color: #ffffff; /* White background for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Adjust width if needed */
+    height: 600px;
+    padding: 30px; /* Increased padding for better spacing */
+    font-family: Arial, sans-serif;
+    border: 5px solid #4caf50; /* Green border to match the theme */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+.aqi-container {
+    margin-top: 20px;
+}
+
+.aqi-meter {
+    width: 450px; /* Length of the meter */
+    height: 40px; /* Height of the meter */
+    background: linear-gradient(to right, 
+        #009966 0%,    /* Good: 0-50 */
+        #ffde33 20%,   /* Moderate: 51-100 */
+        #ff9933 40%,   /* Unhealthy for Sensitive Groups: 101-150 */
+        #cc0033 60%,   /* Unhealthy: 151-200 */
+        #660099 80%,   /* Very Unhealthy: 201-300 */
+        #7e0023 100%   /* Hazardous: 301-500 */
+    );
+    border-radius: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.aqi-indicator {
+    width: 8px; /* Slightly wider indicator */
+    height: 40px; /* Match height to the AQI meter */
+    background-color: #333; /* Dark color for visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+#aqi-label {
+    margin-top: 15px; /* Spacing above the label */
+    text-align: center;
+    font-size: 22px; /* Increased font size for readability */
+    font-weight: bold;
+}
+
+.go-back-form {
+    margin-top: 30px; /* Increased margin for spacing */
+    text-align: center;
+}
+
+.go-back-button {
+    padding: 20px 40px; /* Larger padding for a prominent button */
+    font-size: 20px; /* Larger font size for better readability */
+    color: white;
+    background-color: #4caf50; /* Matching green background */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}

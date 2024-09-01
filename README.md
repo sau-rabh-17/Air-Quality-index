@@ -71,27 +71,34 @@ Home Page: Enter a city name in the search box and click "Submit" to get the air
 AQI Meter: The AQI meter will show the overall air quality index on a color-coded bar, and detailed pollutant data will be displayed below.
 Error Handling: If the city is not found, a "City not found" message will appear, along with a button to return to the home page.
 
-## Project Structure
-
-/node_modules/          # Directory where all installed dependencies are stored
-
-/public
-  /style
-    - index.css          # CSS file for styling the Home Page
-    - quality.css        # CSS file for styling the AQI page
-    - notfound.css       # CSS file for styling the 'not found' page
-
-/views
-  - index.ejs            # EJS template for the home page
-  - quality.ejs          # EJS template for displaying AQI data
-  - notfound.ejs         # EJS template for the 'not found' page
-
-- .env                   # Environment variables file
-- .gitignore             # Git ignore file
-- index.js               # Main application file
-- package-lock.json      # Ensures consistency across different environments
-- package.json           # Project metadata and dependency management
-- README.md              # This README file
+<h1>Project Structure</h1>
+    <ul>
+        <li><strong>/node_modules/</strong>: Directory where all installed dependencies are stored</li>
+        <li><strong>/public</strong>
+            <ul>
+                <li><strong>/style</strong>
+                    <ul>
+                        <li><strong>index.css</strong>: CSS file for styling the Home Page</li>
+                        <li><strong>quality.css</strong>: CSS file for styling the AQI page</li>
+                        <li><strong>notfound.css</strong>: CSS file for styling the 'not found' page</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>/views</strong>
+            <ul>
+                <li><strong>index.ejs</strong>: EJS template for the home page</li>
+                <li><strong>quality.ejs</strong>: EJS template for displaying AQI data</li>
+                <li><strong>notfound.ejs</strong>: EJS template for the 'not found' page</li>
+            </ul>
+        </li>
+        <li><strong>.env</strong>: Environment variables file</li>
+        <li><strong>.gitignore</strong>: Git ignore file</li>
+        <li><strong>index.js</strong>: Main application file</li>
+        <li><strong>package-lock.json</strong>: Ensures consistency across different environments</li>
+        <li><strong>package.json</strong>: Project metadata and dependency management</li>
+        <li><strong>README.md</strong>: This README file</li>
+    </ul>
 
 ## API Reference
 The application uses the API Ninjas Air Quality API to fetch air quality data.

@@ -109,6 +109,3 @@ The application uses the API Ninjas Air Quality API to fetch air quality data.
 
 ## Contributing
 Contributions are welcome! If you would like to contribute, please fork the repository and create a pull request.
-
-## License
-This project is licensed under the MIT License.
